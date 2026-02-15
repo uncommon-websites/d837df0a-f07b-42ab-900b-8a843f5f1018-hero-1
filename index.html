@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueCargo - Automated Freight Audit & Dispute Resolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Typography Utilities */
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Base animation classes */
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        /* Staggered delays */
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-700 { animation-delay: 700ms; }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up,
+            .animate-fade-in,
+            .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-[1400px] mx-auto px-6 py-6 flex justify-between items-center animate-fade-in delay-0">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 text-slate-900">
+                <!-- Hexagon/Cube Icon -->
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 4.5L19.5 8.5V15.5L12 19.5L4.5 15.5V8.5L12 4.5Z" fill="currentColor"/>
+                    <path d="M12 11L7 8.5L12 6L17 8.5L12 11Z" fill="currentColor"/>
+                    <path d="M12 11V16" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight text-slate-900">BlueCargo</span>
+        </a>
+
+        <!-- Nav Links -->
+        <div class="flex items-center gap-6 md:gap-8">
+            <a href="#" class="text-sm font-medium text-[#334155] hover:text-slate-900 transition-colors">Sign in</a>
+            <a href="#" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Get started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-7xl mx-auto px-4 pt-20 md:pt-32 pb-12 flex flex-col items-center text-center">
+        
+        <!-- Headline -->
+        <h1 class="animate-fade-in-up delay-100 text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-slate-900 leading-[1.05] mb-6 max-w-5xl text-balance">
+            Automated Freight Audit<br class="hidden md:block" /> & Dispute Resolution
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="animate-fade-in-up delay-200 text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mb-10 text-pretty mx-auto">
+            BlueCargo automates freight invoice audits via real-time port data validation and AI-powered dispute resolution.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="animate-fade-in-up delay-300">
+            <a href="#" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-[#0ea5e9] hover:bg-blue-700 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+                Get started
+            </a>
+        </div>
+
+        <!-- Hero Image / Device Mockup -->
+        <div class="mt-20 md:mt-32 w-full max-w-4xl mx-auto animate-scale-in delay-500 relative">
+            <!-- This image represents the top of the hardware device shown in the screenshot -->
+            <!-- Using a placeholder that mimics the metallic/screen look -->
+            <div class="relative rounded-t-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
+                <!-- Screen bezel simulation -->
+                <div class="p-4 md:p-8 bg-gradient-to-b from-slate-300 to-slate-200 pb-0">
+                    <div class="rounded-t-2xl overflow-hidden bg-black shadow-inner">
+                        <img 
+                            src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/d837df0a-f07b-42ab-900b-8a843f5f1018/hero-1-img-0-1771171521649.png" 
+                            alt="Hardware Interface Dashboard" 
+                            class="w-full h-auto block opacity-90"
+                        >
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative gradient glow behind the device (subtle) -->
+            <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/30 blur-3xl rounded-full opacity-0 animate-fade-in delay-700"></div>
+        </div>
+
+    </main>
+
+</body>
+</html>
